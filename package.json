@@ -1,5 +1,5 @@
 {
-  "homepage": "https://shoes1085.github.io/portfolio",
+  "homepage": "https://shoes1085.github.io/portfolio/",
   "name": "react-todolist",
   "private": true,
   "version": "0.0.0",
@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.25.1",
+    "yet-another-react-lightbox": "^3.21.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
