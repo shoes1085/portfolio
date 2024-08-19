@@ -1,9 +1,18 @@
+@font-face
+{
+  font-family: "Lucida Console";
+  src: url('../assets/fonts/lucon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *
 {
   font-family: montserrat, Arial, Helvetica, sans-serif;
   scrollbar-color: rgb(78, 78, 78) black;
-  scrollbar-gutter: 100px;
-  
+  /* scrollbar-gutter: 100px; */
+  /* scrollbar-gutter: stable; */
+  /* scroll-behavior: smooth; */
 }
 
 ::selection
@@ -22,6 +31,7 @@ body
   /* background: rgb(0,15,15); */
   /* background-size: 100%; */
   background-color: #000F0F;
+  background: radial-gradient(circle, rgba(0,15,15,1) 10%, rgb(0, 44, 44) 300%);
   margin:0;
   padding:0;
 }
@@ -41,6 +51,7 @@ body
 
 .credits-section
 {
+  line-height: 1.4;
   text-align: center;
   color: gray;
   margin-top:512px;
@@ -106,10 +117,12 @@ body
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 16px;
+  cursor: default;
 }
 
 .works-subtitle
 {
+  cursor: default;
   line-height: 1.4;
   color: gray;
   margin-bottom: 48px;
@@ -124,7 +137,8 @@ body
   cursor: pointer;
   color: gray;
   color: rgb(70, 120, 120);
-  line-height: 1.4;
+  line-height: 1.5;
+  width: max-content;
 }
 
 .white-cta
@@ -192,7 +206,7 @@ body
 
 .navigation-item
 {
-  font-family: monospace;
+  font-family: "Lucida Console";
   /* border: 1px solid white; */
   font-size: 16px;
   width: max-content;
@@ -262,11 +276,13 @@ body
   bottom: 0; */
   /* padding-bottom: 32px; */
   color: gray;
+  width: max-content;
+  position: relative;
 }
 
 .email-link
 {
-  width: 100%;
+  width: max-content;
   color: gray;
   text-decoration: none;
   stroke: gray;
@@ -275,7 +291,54 @@ body
   align-items: center;  
   gap: 8px;
   transition: 0.15s;
-  /* cursor: pointer; */
+  cursor: pointer;
+  user-select: none;
+}
+
+.email-link:hover
+{
+  transition: 0.15s;
+  /* transform: translateX(28px); */
+  color: white;
+}
+
+.email-clicked
+{ 
+  color: rgba(0, 0, 0, 0);
+}
+
+.email-clicked::before
+{
+  font-family: "Lucida Console";
+  font-size: 14px;
+  color: gray;
+  animation: clicked 0.15s ease-in-out forwards;
+  transform-origin: left center;
+  padding-left: 18px;
+  padding-right: 14px;
+  content: '> Copied to clipboard! <';
+  line-height: 2;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+}
+
+.email-clicked:hover
+{
+  color: rgba(0, 0, 0, 0);
+}
+
+@keyframes clicked
+{
+  from
+  {
+    transform: scaleX(0) translateX(0);
+  }
+  
+  to
+  {
+    transform: scaleX(1) translateX(16px);
+  }
 }
 
 /* .email-link::after
@@ -292,13 +355,6 @@ body
   content: url("./assets/icon_copy.svg");
   transform: translateX(-28px) scaleX(1);
 } */
-
-.email-link:hover
-{
-  transition: 0.15s;
-  /* transform: translateX(28px); */
-  color: white;
-}
 
 .intro-container
 {
@@ -324,6 +380,7 @@ body
 
 .intro-paragraph
 {
+  padding-right: 32px;
   text-align: left;
   line-height: 1.6;
   color:gray
@@ -332,13 +389,19 @@ body
 .works-section
 {
   width: 100%;
+  margin-bottom: 32px;
+}
+
+.active-section
+{
+  color: white;
 }
 
 .section-title
 {
-  font-family: monospace;
+  font-family: "Lucida Console";
   color: gray;
-  font-size: 32px;
+  font-size: 24px;
   font-weight: bold;
   border-bottom: 1px solid gray;
   padding-bottom: 8px;
@@ -346,18 +409,64 @@ body
 
 .link
 {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
   font-weight: bold;
 }
 
 .link:hover
 {
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  color: rgb(192, 192, 192);
+}
+
+.viewer-container
+{
+  display: none;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, .8);
+  position: fixed;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.viewer-content
+{
+  position: absolute;
+  background-color: gray;
+  margin: 32px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.noscroll
+{
+  overflow: hidden;
+}
+
+.visible
+{
+  display: block;
+}
+
+@media screen and (max-width: 1434px)
+{
+  .works-card
+  {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 960px)
 {
+  body
+  {
+    background: radial-gradient(circle, rgba(0,15,15,1) 10%, rgb(0, 64, 64) 600%);
+  }
   .main-container
   {
     justify-content: center;
@@ -369,7 +478,7 @@ body
     position: static;
     max-width: 100%;
     height: max-content;
-    background-color: #000F0F;
+    /* background-color: #000F0F; */
   }
   
   .navigation-container
@@ -379,7 +488,7 @@ body
 
   .contact-container
   {
-    position: static;
+    /* position: static; */
     /* margin-top: 160px; */
     padding: 0;
     padding-top: 32px;
@@ -397,5 +506,42 @@ body
   {
     width: 100%;
     max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 475px)
+{
+  .intro-paragraph
+  {
+    width: 100%;
+    padding: 0;
+  }
+  .intro-header
+  {
+    font-size: 28px;
+  }
+  .intro-big
+  {
+    font-size: 52px;
+  }
+
+  .info-container, .works-container, .main-container
+  {
+    padding: 8px 8px 32px 8px;
+  }
+
+  .works-card
+  {
+    padding: 16px 16px 16px 24px;
+  }
+
+  .works-title
+  {
+    font-size: 28px;
+  }
+
+  .credits-section
+  {
+    margin-top: 16px;
   }
 }
