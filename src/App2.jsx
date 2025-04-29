@@ -137,6 +137,7 @@ import email1 from './assets/email1.png';
 import email2 from './assets/email2.png';
 import email3 from './assets/email3.png';
 import email4 from './assets/email4.png';
+import email5 from './assets/email5.png';
 
 import city1 from "./assets/city1.png";
 import city2 from "./assets/city2.png";
@@ -144,6 +145,9 @@ import city2 from "./assets/city2.png";
 import page1 from './assets/pages_about-us.png';
 import page2 from './assets/pages_custom-gifts.png';
 import page3 from './assets/pages_valentines.png';
+import page4 from './assets/landingpages/postcard0.png';
+import page5 from './assets/landingpages/fairmonde0.png';
+
 
 import Lightbox from "yet-another-react-lightbox";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
@@ -153,28 +157,31 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import React, { useState, useEffect } from 'react';
+import Gallery from './Gallery';
 
-export default function App2()
-{
+import data from './data_real.json';
+import WorksItem from './components/WorksItem';
+
+export default function App2() {
     const [open, setOpen] = useState();
 
-    const email_slides = 
-    [
-        {src: email1},
-        {src: email2},
-        {src: email3},
-        {src: email4},
+    const email_slides = [
+        { src: email1 },
+        { src: email2 },
+        { src: email3 },
+        { src: email4 },
+        { src: email5 },
     ]
 
     const gaze_slides = [
-        {src: gaze1},
-        {src: gaze2},
-        {src: gaze3},
-        {src: gaze4},
+        { src: gaze1 },
+        { src: gaze2 },
+        { src: gaze3 },
+        { src: gaze4 },
     ]
 
     const ss_slides = [
-        { src: ss1, title: "Site Banner"},
+        { src: ss1, title: "Site Banner" },
         { src: ss2, title: "Facebook Paid Ad" },
         { src: ss3, title: "Facebook Paid Ad" },
         { src: ss4, title: "Offline Banner" },
@@ -223,124 +230,132 @@ export default function App2()
     ];
 
     const bio_slides = [
-        {src: bio1},
-        {src: bio2},
-        {src: bio3},
-        {src: bio4},
+        { src: bio1 },
+        { src: bio2 },
+        { src: bio3 },
+        { src: bio4 },
     ]
 
     const wholesale_slides = [
-        {src: wholesale1, title: "App Store / Play Store App Preview 1"},
-        {src: wholesale2, title: "App Store / Play Store App Preview 2"},
-        {src: wholesale3, title: "App Store / Play Store App Preview 3"},
-        {src: wholesale4, title: "App Store / Play Store App Preview 4"},
-        {src: wholesale5, title: "App Store / Play Store App Preview 5"},
-        {src: wholesale6, title: "App Store / Play Store App Preview 6"},
-        {src: wholesale7, title: "App Store / Play Store App Preview 7"},
-        {src: wholesale9, title: "App Store / Play Store App Preview Whole"},
-        {src: wholesale8, title: "App Splash Screen"},
+        { src: wholesale1, title: "App Store / Play Store App Preview 1" },
+        { src: wholesale2, title: "App Store / Play Store App Preview 2" },
+        { src: wholesale3, title: "App Store / Play Store App Preview 3" },
+        { src: wholesale4, title: "App Store / Play Store App Preview 4" },
+        { src: wholesale5, title: "App Store / Play Store App Preview 5" },
+        { src: wholesale6, title: "App Store / Play Store App Preview 6" },
+        { src: wholesale7, title: "App Store / Play Store App Preview 7" },
+        { src: wholesale9, title: "App Store / Play Store App Preview Whole" },
+        { src: wholesale8, title: "App Splash Screen" },
     ]
 
     const city_slides = [
-        {src: city1},
-        {src: city2},
+        { src: city1 },
+        { src: city2 },
     ]
 
     const wichita_slides = [
-        {src: wichita1},
-        {src: wichita2},
-        {src: wichita3},
-        {src: wichita4},
+        { src: wichita1 },
+        { src: wichita2 },
+        { src: wichita3 },
+        { src: wichita4 },
     ]
 
     const vendetta_slides = [
-        {src: vendetta1},
-        {src: vendetta2},
-        {src: vendetta3},
-        {src: vendetta4},
+        { src: vendetta1 },
+        { src: vendetta2 },
+        { src: vendetta3 },
+        { src: vendetta4 },
     ];
 
     const unrest_slides = [
-        {src: cu1},
-        {src: cu2},
-        {src: cu3},
-        {src: cu4}
+        { src: cu1 },
+        { src: cu2 },
+        { src: cu3 },
+        { src: cu4 }
     ];
 
-    const ravenholm_slides = 
-    [
-        {src: ravenholm1},
-        {src: ravenholm2},
-        {src: ravenholm3},
-        {src: ravenholm4},
-    ];
+    const ravenholm_slides =
+        [
+            { src: ravenholm1 },
+            { src: ravenholm2 },
+            { src: ravenholm3 },
+            { src: ravenholm4 },
+        ];
 
     const cyber_slides = [
-        {src: cyber1},
-        {src: cyber2},
-        {src: cyber3},
-        {src: cyber4},
+        { src: cyber1 },
+        { src: cyber2 },
+        { src: cyber3 },
+        { src: cyber4 },
     ];
 
     const melos_slides = [
-        {src: melos1},
-        {src: melos2},
-        {src: melos3},
-        {src: melos4},
+        { src: melos1 },
+        { src: melos2 },
+        { src: melos3 },
+        { src: melos4 },
     ];
 
     const summoner_slides = [
-        {src: summoner1},
-        {src: summoner2},
-        {src: summoner3},
-        {src: summoner4},
+        { src: summoner1 },
+        { src: summoner2 },
+        { src: summoner3 },
+        { src: summoner4 },
     ];
 
     const crossfire_slides = [
-        {src: c171},
-        {src: c172},
-        {src: c173},
-        {src: c174},
+        { src: c171 },
+        { src: c172 },
+        { src: c173 },
+        { src: c174 },
     ]
 
     const psychopomp_slides = [
-        {src: psychopomp1},
-        {src: psychopomp2},
-        {src: psychopomp3},
-        {src: psychopomp4},
+        { src: psychopomp1 },
+        { src: psychopomp2 },
+        { src: psychopomp3 },
+        { src: psychopomp4 },
     ];
-    
+
     const papers_slides = [
-        {src: pp1},
-        {src: pp2},
-        {src: pp3},
-        {src: pp4},
+        { src: pp1 },
+        { src: pp2 },
+        { src: pp3 },
+        { src: pp4 },
     ];
 
     const c17_slides = [
-        {src: hotlinecop1},
-        {src: hotlinecop2},
-        {src: hotlinecop3},
-        {src: hotlinecop4},
+        { src: hotlinecop1 },
+        { src: hotlinecop2 },
+        { src: hotlinecop3 },
+        { src: hotlinecop4 },
     ];
 
     const gcans_slides = [
-        {src: gcans1},
-        {src: gcans2},
-        {src: gcans3},
-        {src: gcans4},
+        { src: gcans1 },
+        { src: gcans2 },
+        { src: gcans3 },
+        { src: gcans4 },
     ];
 
     const nn_slides = [
-        {src: nn1},
-        {src: nn2},
-        {src: nn3},
+        { src: nn1 },
+        { src: nn2 },
+        { src: nn3 },
     ];
 
     const page_slides = [
-        {src: page1, title: "Shop Suki About Us Page"},
-        {src: page2, title: "Shop Suki Holiday Gift Packs Landing Page"},
-        {src: page3, title: "Shop Suki Valentine's Day Landing Page"},
+        { src: page1, title: "Shop Suki About Us Page" },
+        { src: page2, title: "Shop Suki Holiday Gift Packs Landing Page" },
+        { src: page3, title: "Shop Suki Valentine's Day Landing Page" },
+    ];
+
+    const fairmode_slides = [
+        { src: page5, title: "Fairmonde B2B Landing Page" }
+    ];
+
+    const postcard_slides = [
+        { src: page4, title: "Postcard Christmas Landing Page" }
     ];
 
     const slides = [
@@ -350,68 +365,72 @@ export default function App2()
 
     const [emailClicked, setEmailClicked] = useState(false);
 
-    const emailClickedHandler = () =>
-    {
-        if(!emailClicked)
-        {
+    const emailClickedHandler = () => {
+        if (!emailClicked) {
             navigator.clipboard.writeText("cadrosario98@gmail.com")
             setEmailClicked(true);
             setTimeout(
-                () =>
-                {
+                () => {
                     setEmailClicked(false);
                 }, 3000
             );
         }
     };
 
-    function navigateToSection(id)
-    {
-        document.getElementById(id).scrollIntoView({behavior: 'smooth'});
+    function navigateToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
     }
 
     const [viewerState, setViewerState] = useState(false);
 
-    const viewerClickedHandler = () =>
-    {
+    const viewerClickedHandler = () => {
         document.body.className += ' noscroll';
         document.body.classList.remove('noscroll');
     }
 
-    const hideViewer = () =>
-    {
+    const hideViewer = () => {
         setViewerState(false);
     }
 
     document.addEventListener('DOMContentLoaded', () => {
         const sections = document.querySelectorAll('works-section');
-        
-        const options = {
-          root: null, // viewport
-          rootMargin: '0px',
-          threshold: 0.5 // 50% of the element must be visible
-        };
-      
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              console.log(`${entry.target.id} is in view`);
-              // You can add your logic here, like adding a class or triggering an action
-              entry.target.classList.add('in-view');
-            } else {
-              console.log(`${entry.target.id} is out of view`);
-              entry.target.classList.remove('in-view');
-            }
-          });
-        }, options);
-      
-        sections.forEach(section => {
-          observer.observe(section);
-        });
-      });
 
-    return(
+        const options = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.5 // 50% of the element must be visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    console.log(`${entry.target.id} is in view`);
+                    // You can add your logic here, like adding a class or triggering an action
+                    entry.target.classList.add('in-view');
+                } else {
+                    console.log(`${entry.target.id} is out of view`);
+                    entry.target.classList.remove('in-view');
+                }
+            });
+        }, options);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+
+    var [galleryVisibility, setGalleryVisibility] = useState(false);
+
+    const openGalleryHandler = () => {
+        setGalleryVisibility(!galleryVisibility);
+        document.body.style.overflow = galleryVisibility ? 'visible' : 'hidden';
+    }
+
+    const [currentItem, setCurrentItem] = useState(null);
+
+    return (
         <>
+            {galleryVisibility && <Gallery item={currentItem} openGallery={openGalleryHandler} />}
             <Lightbox
                 styles={{ container: { backgroundColor: "rgba(0, 0, 0, .9)" } }}
                 plugins={[Thumbnails, Zoom, Captions]}
@@ -436,7 +455,7 @@ export default function App2()
                             </div>
                         </div>
                         <div className="intro-paragraph">
-                            I'm a graphic designer and computer science graduate with a passion for blending creativity with technology.
+                            I'm a computer science graduate with a passion for blending creativity with technology.
                         </div>
                     </div>
 
@@ -444,6 +463,16 @@ export default function App2()
                         <a onClick={() => navigateToSection("graphic-design")}>
                             <div className="navigation-item">
                                 Graphic Design
+                            </div>
+                        </a>
+                        <a onClick={() => navigateToSection("shopify-storefronts")}>
+                            <div className="navigation-item">
+                                Shopify Storefronts
+                            </div>
+                        </a>
+                        <a onClick={() => navigateToSection("landing-pages")}>
+                            <div className="navigation-item">
+                                Landing Pages
                             </div>
                         </a>
                         {/* <a className="navigation-link" href="#motion-graphics"> */}
@@ -457,11 +486,6 @@ export default function App2()
                                 Email Marketing
                             </div>
                         </a>
-                        <a onClick={() => navigateToSection("landing-pages")}>
-                            <div className="navigation-item">
-                                Landing Pages
-                            </div>
-                        </a>
                         <a onClick={() => navigateToSection("level-design")}>
                             <div className="navigation-item">
                                 Level Design
@@ -473,7 +497,7 @@ export default function App2()
                             </div>
                         </a>
                     </div>
-                    
+
                     <div className="contact-container">
                         <div className={`email-link ${emailClicked ? 'email-clicked' : ''}`} onClick={emailClickedHandler}>
                             {/* <svg width="24px" height="24px" viewBox="0 0 24 24">
@@ -486,6 +510,59 @@ export default function App2()
                     </div>
                 </div>
 
+                <div className='works-container'>
+                    <section id="graphic-design" className="works-section">
+                        <div className="section-title">Graphic Design</div>
+                        <div className="works-list">
+                            {data.filter(item => item.category === "graphic_design").map((item, index) => (
+                                <WorksItem key={index} openGalleryHandler={openGalleryHandler} currentItem={currentItem} setCurrentItem={setCurrentItem} workItem={item} />
+                            ))}
+                        </div>
+                    </section>
+
+                    <section id="shopify-storefronts" className="works-section">
+                        <div className="section-title">Shopify Storefronts</div>
+                        <div className="works-list">
+                            {data.filter(item => item.category === "shopify_storefronts").map((item, index) => (
+                                <WorksItem key={index} openGalleryHandler={openGalleryHandler} currentItem={currentItem} setCurrentItem={setCurrentItem} workItem={item} />
+                            ))}
+                        </div>
+                    </section>
+
+                    <section id="landing-pages" className="works-section">
+                        <div className="section-title">Landing Pages</div>
+                        <div className="works-list">
+                            {data.filter(item => item.category === "landing_pages").map((item, index) => (
+                                <WorksItem key={index} openGalleryHandler={openGalleryHandler} currentItem={currentItem} setCurrentItem={setCurrentItem} workItem={item} />
+                            ))}
+                        </div>
+                    </section>
+
+                    <section id="motion-graphics" className="works-section">
+                        <div className="section-title">Motion Graphics</div>
+                        <div className="works-list">
+                            {data.filter(item => item.category === "motion_graphics").map((item, index) => (
+                                <WorksItem key={index} openGalleryHandler={openGalleryHandler} currentItem={currentItem} setCurrentItem={setCurrentItem} workItem={item} />
+                            ))}
+                        </div>
+                    </section>
+
+                    <section id="email-marketing" className="works-section">
+                        <div className="section-title">Email Marketing</div>
+                        <div className="works-list">
+                            {data.filter(item => item.category === "email_marketing").map((item, index) => (
+                                <WorksItem key={index} openGalleryHandler={openGalleryHandler} currentItem={currentItem} setCurrentItem={setCurrentItem} workItem={item} />
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="credits-section">
+                        Made with <a className="link" href="https://react.dev">React</a> &#8226; <a target='_blank' href='https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode' className='link'>CC BY-NC-SA 4.0</a>
+                        <br /><span onClick={() => openGalleryHandler()} style={{ fontSize: "14px" }}>© Christian Andrew del Rosario 2024</span>
+                    </section>
+                </div>
+
+                {/* 
                 <div className="works-container">
                     <section id="graphic-design" className="works-section">
                         <div className="section-title">Graphic Design</div>
@@ -494,16 +571,67 @@ export default function App2()
                                 <div className="works-subtitle">2022 - 2024</div>
                                 <div className="works-title">Shop Suki</div>
                                 <div className="works-subtitle">Social Media Posts, Offline and Online Ads, Email Marketing, Site Banners, Email Notifications.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(ss_slides)}} className="works-cta">View gallery <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
+                                <div onClick={() => { setOpen(true); setCurrentslides(ss_slides) }} className="works-cta">View gallery <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">2024</div>
                                 <div className="works-title">KCC Wholesale</div>
                                 <div className="works-subtitle">App Store / Play Store Preview, Splash Screen.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(wholesale_slides)}} className="works-cta">View gallery <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
+                                <div onClick={() => { setOpen(true); setCurrentslides(wholesale_slides) }} className="works-cta">View gallery <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
                             </div>
                         </div>
                     </section>
+
+                    <section id="shopify-storefronts" className="works-section">
+                        <div className="section-title">Shopify Storefronts</div>
+                        <div className="works-list">
+                            <div className="works-card">
+                                <div className="works-subtitle">2024</div>
+                                <div className="works-title">Momiji</div>
+                                <div className="works-subtitle">Homepage, Collections Page, Product Page, Header, Footer, About Us Page.</div>
+                            </div>
+                            <div className="works-card">
+                                <div className="works-subtitle">2024</div>
+                                <div className="works-title">Savvy Mama</div>
+                                <div className="works-subtitle">Homepage sections, Product Page.</div>
+                            </div>
+                            <div className="works-card">
+                                <div className="works-subtitle">2024</div>
+                                <div className="works-title">JeannieRichard</div>
+                                <div className="works-subtitle">Product Slider section, Product Page.</div>
+                            </div>
+                            <div className="works-card">
+                                <div className="works-subtitle">2024</div>
+                                <div className="works-title">Tria the Label</div>
+                                <div className="works-subtitle">Minor fixes to the hompage and small changes to their About Us Page.</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="landing-pages" className="works-section">
+                        <div className="section-title">Landing Pages</div>
+                        <div className="works-list">
+                            <div className="works-card">
+                                <div className="works-subtitle">2022 - 2024</div>
+                                <div className="works-title">Shop Suki</div>
+                                <div className="works-subtitle">About Us Page, Holiday Gifting Guide, Valentine's Day Page.</div>
+                                <div onClick={() => { setOpen(true); setCurrentslides(page_slides) }} className="works-cta">View gallery <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                            </div>
+                            <div className="works-card">
+                                <div className="works-subtitle">2024</div>
+                                <div className="works-title">Postcard</div>
+                                <div className="works-subtitle">Landing page for a Christmas Catalogue</div>
+                                <div onClick={() => { setOpen(true); setCurrentslides(postcard_slides) }} className="works-cta">View image <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                            </div>
+                            <div className="works-card">
+                                <div className="works-subtitle">2024</div>
+                                <div className="works-title">Fairmonde</div>
+                                <div className="works-subtitle">B2B Landing Page</div>
+                                <div onClick={() => { setOpen(true); setCurrentslides(fairmode_slides) }} className="works-cta">View image <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                            </div>
+                        </div>
+                    </section>
+
                     <section id="motion-graphics" className="works-section">
                         <div className="section-title">Motion Graphics</div>
                         <div className="works-list">
@@ -511,13 +639,19 @@ export default function App2()
                                 <div className="works-subtitle">2023</div>
                                 <div className="works-title">Shop Suki</div>
                                 <div className="works-subtitle">IsaTV Commercial</div>
-                                <a target='_blank' href='https://youtu.be/wze3Jj4YfTw'><div className="works-cta">Watch on YouTube <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <a target='_blank' href='https://youtu.be/wze3Jj4YfTw'><div className="works-cta">Watch on YouTube <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">2023</div>
                                 <div className="works-title">Shop Suki</div>
                                 <div className="works-subtitle">BPI Partnership Video Ad</div>
-                                <a target='_blank' href='https://youtube.com/shorts/89Ea2-zN0Jk'><div className="works-cta">Watch on YouTube <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <a target='_blank' href='https://youtube.com/shorts/89Ea2-zN0Jk'><div className="works-cta">Watch on YouTube <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
+                            </div>
+                            <div className="works-card">
+                                <div className="works-subtitle">2023</div>
+                                <div className="works-title">Shop Suki</div>
+                                <div className="works-subtitle">Click & Collect Video Ad    </div>
+                                <a target='_blank' href='https://youtube.com/shorts/0ANVgZL-y_I?feature=share'><div className="works-cta">Watch on YouTube <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                         </div>
                     </section>
@@ -528,18 +662,7 @@ export default function App2()
                                 <div className="works-subtitle">2022 - 2023</div>
                                 <div className="works-title">Shop Suki</div>
                                 <div className="works-subtitle">Promos and Product  Marketing Emails</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(email_slides)}} className="works-cta">View gallery <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                            </div>
-                        </div>
-                    </section>
-                    <section id="landing-pages" className="works-section">
-                        <div className="section-title">Landing Pages</div>
-                        <div className="works-list">
-                            <div className="works-card">
-                                <div className="works-subtitle">2022 - 2024</div>
-                                <div className="works-title">Shop Suki</div>
-                                <div className="works-subtitle">About Us Page, Holiday Gifting Guide, Valentine's Day Page.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(page_slides)}} className="works-cta">View gallery <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
+                                <div onClick={() => { setOpen(true); setCurrentslides(email_slides) }} className="works-cta">View gallery <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
                             </div>
                         </div>
                     </section>
@@ -550,108 +673,108 @@ export default function App2()
                                 <div className="works-subtitle">August 2024</div>
                                 <div className="works-title">The Omnipresent Gaze of the Transhuman Arm of the Combine Overwatch</div>
                                 <div className="works-subtitle">Entry for a Half-Life 2 level design competition. The competition was about creating maps only localized within three rooms.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(gaze_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.moddb.com/mods/map-labs/downloads/three-rooms"><div className="works-cta">Download on ModDB <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(gaze_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.moddb.com/mods/map-labs/downloads/three-rooms"><div className="works-cta">Download on ModDB <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">June 2023</div>
                                 <div className="works-title">Vendetta</div>
                                 <div className="works-subtitle">Entry for a Half-Life 2 level design competition. Featuring a gameplay addition where the player can pickup any prop in the world and use it as a weapon.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(vendetta_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/operation-forcc-map-labs-test-tube-19"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(vendetta_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/operation-forcc-map-labs-test-tube-19"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">April 2022</div>
                                 <div className="works-title">Unrest Procedure</div>
                                 <div className="works-subtitle">Entry for a Half-Life 2 level design competition. The competition was about the four pillars of Half-Life - Run, Think, Shoot, Live.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(unrest_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.moddb.com/mods/lambdabuilds/downloads/lambdabuilds-info-comp-start"><div className="works-cta">Download on ModDB <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(unrest_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.moddb.com/mods/lambdabuilds/downloads/lambdabuilds-info-comp-start"><div className="works-cta">Download on ModDB <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">February 2022</div>
                                 <div className="works-title">Ravenholm Reconaissance Squad</div>
                                 <div className="works-subtitle">Entry for a Half-Life 2 level design competition. The competition was about repurposing multiplayer maps as a base for entrants' own levels. Also ported to Garry's Mod.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(ravenholm_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href='https://steamcommunity.com/sharedfiles/filedetails/?id=2827824052'><div className="works-cta white-cta">Download on Steam<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/the-layout-map-labs-17/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(ravenholm_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href='https://steamcommunity.com/sharedfiles/filedetails/?id=2827824052'><div className="works-cta white-cta">Download on Steam<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/the-layout-map-labs-17/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">November 2021</div>
                                 <div className="works-title">Cyber Trauma</div>
                                 <div className="works-subtitle">My second map for TWHL Tower: Source. Utilizing textures by <a className="link" target='_blank' href='https://www.philipk.net'>Philip Klevestav</a>.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(cyber_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/twhl-tower-source/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(cyber_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/twhl-tower-source/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">July 2021</div>
                                 <div className="works-title">Caution: Biological Hazard</div>
                                 <div className="works-subtitle">My first map TWHL Tower: Source. Heavily inspired by the original <b>Resident Evil</b> games on PS1.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(bio_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/twhl-tower-source/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(bio_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/twhl-tower-source/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">April 2021</div>
                                 <div className="works-title">レーベンホルムには行きたい...</div>
                                 <div className="works-subtitle">Entry for a Half-Life 2 level design competition. In this map, set in zombie infested Ravenholm, you are equipped with a custom weapon named "Sawblade Launcher".</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(melos_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/a-place-in-the-west-the-wrap-up-two-map-labs-test-tubes-14-15/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(melos_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/a-place-in-the-west-the-wrap-up-two-map-labs-test-tubes-14-15/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">October 2021</div>
                                 <div className="works-title">The Summoner</div>
                                 <div className="works-subtitle">Part of a Half-Life 2 level design competition. This competition asked entrants to complete their old unfinished maps. Also ported to Garry's Mod.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(summoner_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href='https://steamcommunity.com/sharedfiles/filedetails/?id=2829138126'><div className="works-cta white-cta">Download on Steam<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/a-place-in-the-west-the-wrap-up-two-map-labs-test-tubes-14-15/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(summoner_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href='https://steamcommunity.com/sharedfiles/filedetails/?id=2829138126'><div className="works-cta white-cta">Download on Steam<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/a-place-in-the-west-the-wrap-up-two-map-labs-test-tubes-14-15/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">March 2021</div>
                                 <div className="works-title">Operation C.R.O.S.S.F.I.R.E.</div>
-                                <div className="works-subtitle">Entry for a Half-Life 2 level design competition. This is my second map inspired by <b>Hotline Miami</b>. Features dropping / swapping weapons, punishing difficulty, <i><span style={{color: "#0DF2FF"}}>A</span><span style={{color: "#2CD4FF"}}>E</span><span style={{color: "#48B7FF"}}>S</span><span style={{color: "#649BFF"}}>T</span><span style={{color: "#827EFF"}}>H</span><span style={{color: "#A05FFF"}}>E</span><span style={{color: "#B946FF"}}>T</span><span style={{color: "#D52AFF"}}>I</span><span style={{color: "#F30DFF"}}>C</span></i> lightng, character select, and more.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(crossfire_slides)}} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/crossfire-map-labs-test-tube-12/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div className="works-subtitle">Entry for a Half-Life 2 level design competition. This is my second map inspired by <b>Hotline Miami</b>. Features dropping / swapping weapons, punishing difficulty, <i><span style={{ color: "#0DF2FF" }}>A</span><span style={{ color: "#2CD4FF" }}>E</span><span style={{ color: "#48B7FF" }}>S</span><span style={{ color: "#649BFF" }}>T</span><span style={{ color: "#827EFF" }}>H</span><span style={{ color: "#A05FFF" }}>E</span><span style={{ color: "#B946FF" }}>T</span><span style={{ color: "#D52AFF" }}>I</span><span style={{ color: "#F30DFF" }}>C</span></i> lightng, character select, and more.</div>
+                                <div onClick={() => { setOpen(true); setCurrentslides(crossfire_slides) }} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/crossfire-map-labs-test-tube-12/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">October 2020</div>
                                 <div className="works-title">The Psychopomp and the Incessant Hounding of the Eternal Nocturne Sky</div>
                                 <div className="works-subtitle">Entry for a 48-Hour Half-Life 2 level design competition. For a halloween themed map, I decided to flip things around and let you play as the ghost. Also the map is in second-person-perspective.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(psychopomp_slides)}} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/halloween-horror-3-bone-room/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(psychopomp_slides) }} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/halloween-horror-3-bone-room/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">July 2020</div>
                                 <div className="works-title">I Look Upon the Hardworking Laborer</div>
                                 <div className="works-subtitle">Entry for a 48-Hour Half-Life 2 level design competition. The competition was about making maps inspired by or about a particular song or music. The song I chose is <b>Wichita Lineman </b> by <b>Glen Campbell</b>.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(wichita_slides)}} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/tune-map-labs-atom-4/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(wichita_slides) }} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/tune-map-labs-atom-4/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">July 2020</div>
                                 <div className="works-title">Citadel Core Meltdown Evacuation Protocol</div>
                                 <div className="works-subtitle">Entry for a Half-Life 2 level design competition. Heavily inspired by <b>Papers Please</b>. In this map, you play as a stalker tasked with selecting who are permitted to leave the dying citadel.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(papers_slides)}} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/fusionville-2-map-labs-10/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(papers_slides) }} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/fusionville-2-map-labs-10/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">June 2020</div>
                                 <div className="works-title">Combine Overwatch Dispatch City Seventeen</div>
-                                <div className="works-subtitle">Entry for a Half-Life 2 level design competition. My first level inspired by <b>Hotline Miami</b>. In this map you play as a special branch of police known as the Adjudicators. Also features <span style={{color: "#0DF2FF"}}>A</span><span style={{color: "#2CD4FF"}}>E</span><span style={{color: "#48B7FF"}}>S</span><span style={{color: "#649BFF"}}>T</span><span style={{color: "#827EFF"}}>H</span><span style={{color: "#A05FFF"}}>E</span><span style={{color: "#B946FF"}}>T</span><span style={{color: "#D52AFF"}}>I</span><span style={{color: "#F30DFF"}}>C</span> lighting.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(c17_slides)}} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/back-on-track/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div className="works-subtitle">Entry for a Half-Life 2 level design competition. My first level inspired by <b>Hotline Miami</b>. In this map you play as a special branch of police known as the Adjudicators. Also features <span style={{ color: "#0DF2FF" }}>A</span><span style={{ color: "#2CD4FF" }}>E</span><span style={{ color: "#48B7FF" }}>S</span><span style={{ color: "#649BFF" }}>T</span><span style={{ color: "#827EFF" }}>H</span><span style={{ color: "#A05FFF" }}>E</span><span style={{ color: "#B946FF" }}>T</span><span style={{ color: "#D52AFF" }}>I</span><span style={{ color: "#F30DFF" }}>C</span> lighting.</div>
+                                <div onClick={() => { setOpen(true); setCurrentslides(c17_slides) }} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/back-on-track/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">May 2020</div>
                                 <div className="works-title">G-Cans Project</div>
                                 <div className="works-subtitle">Entry for a Half-Life 2 level design competition. Features an area inspired by the <a className='link' target='_blank' href='https://en.wikipedia.org/wiki/Metropolitan_Area_Outer_Underground_Discharge_Channel'><b>Metropolitan Area Outer Underground Discharge Channel</b></a>.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(gcans_slides)}} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/eye-candy/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(gcans_slides) }} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://www.runthinkshootlive.com/posts/eye-candy/"><div className="works-cta">Download on RTSL <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                             <div className="works-card">
                                 <div className="works-subtitle">April 2020</div>
                                 <div className="works-title">city pipey fixy</div>
                                 <div className="works-subtitle">My very first public release of a Half-Life 2 map.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(city_slides)}} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://gamebanana.com/mods/57313"><div className="works-cta">Download on GameBanana <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(city_slides) }} className="works-cta white-cta">View screenshots<svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://gamebanana.com/mods/57313"><div className="works-cta">Download on GameBanana <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                         </div>
                     </section>
@@ -662,16 +785,17 @@ export default function App2()
                                 <div className="works-subtitle">October 2021</div>
                                 <div className="works-title">New Normal</div>
                                 <div className="works-subtitle">An entry for the 2021 MCM YES: RESILIEMC Game Creation Contest to Beat the Pandemic.</div>
-                                <div onClick={() => {setOpen(true); setCurrentslides(nn_slides)}} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg></div>
-                                <a target="_blank" href="https://fish012.itch.io/new-normal"><div className="works-cta">Download on itch.io <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z"/></svg></div></a>
+                                <div onClick={() => { setOpen(true); setCurrentslides(nn_slides) }} className="works-cta white-cta">View screenshots <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z" /></svg></div>
+                                <a target="_blank" href="https://fish012.itch.io/new-normal"><div className="works-cta">Download on itch.io <svg xmlns="http://www.w3.org/2000/svg" height="16px" viewBox="0 -960 960 960" width="24px"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z" /></svg></div></a>
                             </div>
                         </div>
                     </section>
                     <section className="credits-section">
                         Made with <a className="link" href="https://react.dev">React</a> &#8226; <a target='_blank' href='https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode' className='link'>CC BY-NC-SA 4.0</a>
-                        <br/><span style={{fontSize: "14px"}}>© Christian Andrew del Rosario 2024</span>
+                        <br /><span onClick={() => openGalleryHandler()} style={{ fontSize: "14px" }}>© Christian Andrew del Rosario 2024</span>
                     </section>
-                </div>
+                </div> */}
+
             </div>
         </>
     )

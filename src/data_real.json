@@ -1,0 +1,352 @@
+[
+    {
+        "title": "Shop Suki",
+        "subtitle": "2022 - 2024",
+        "description": "Social Media Posts, Offline and Online Ads, Email Marketing, Site Banners, Email Notifications.",
+        "category": "graphic_design",
+        "column_count": 3,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery",
+            "https://google.com"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/ss5.png",
+                "spanall": true
+            },
+            {
+                "src": "./src/assets/shopsuki/ss29.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss12.png"
+            },
+            {
+                "src": "./src/assets/ss7.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss22.png"
+            },
+            {
+                "src": "./src/assets/ss6.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss9.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss14.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss26.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss20.png"
+            },
+            {
+                "src": "./src/assets/ss1.png",
+                "spanall": true
+            },
+            {
+                "src": "./src/assets/ss3.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss6.png"
+            },
+            {
+                "src": "./src/assets/ss2.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss30.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss31.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss27.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss3.png",
+                "spanall": true
+            },
+            {
+                "src": "./src/assets/shopsuki/ss2.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss8.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss28.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss17.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss1.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss19.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss11.png",
+                "spanall": true
+            },
+            {
+                "src": "./src/assets/shopsuki/ss25.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss7.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss4.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss5.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss10.png",
+                "spanall": true
+            },
+            {
+                "src": "./src/assets/shopsuki/ss13.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss21.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss23.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss24.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss32.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss40.png",
+                "spanall": true
+            },
+            {
+                "src": "./src/assets/shopsuki/ss18.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss15.png"
+            },
+            {
+                "src": "./src/assets/shopsuki/ss16.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "KCC Wholesale",
+        "subtitle": "2024",
+        "description": "App Store / Play Store Preview, Splash Screen.",
+        "category": "graphic_design",
+        "column_count": 3,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/wholesale/9.png",
+                "spanall": true
+            },
+            {
+                "src": "./src/assets/wholesale/8.png"
+            },
+            {
+                "src": "./src/assets/wholesale/1.png"
+            },
+            {
+                "src": "./src/assets/wholesale/2.png"
+            },
+            {
+                "src": "./src/assets/wholesale/3.png"
+            },
+            {
+                "src": "./src/assets/wholesale/4.png"
+            },
+            {
+                "src": "./src/assets/wholesale/5.png"
+            },
+            {
+                "src": "./src/assets/wholesale/6.png"
+            },
+            {
+                "src": "./src/assets/wholesale/7.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Momiji",
+        "subtitle": "2024",
+        "description": "Homepage, Collections Page, Product Page, Header, Footer, About Us Page.",
+        "category": "shopify_storefronts",
+        "column_count": 3,
+        "ctaLabel": [],
+        "ctaLink": [],
+        "imageList": [],
+        "imageDescription": []
+    },
+    {
+        "title": "Savvy Mama",
+        "subtitle": "2024",
+        "description": "Homepage sections, Product Page.",
+        "category": "shopify_storefronts",
+        "column_count": 3,
+        "ctaLabel": [],
+        "ctaLink": [],
+        "imageList": [],
+        "imageDescription": []
+    },
+    {
+        "title": "JeannieRichard",
+        "subtitle": "2024",
+        "description": "Product Slider section, Product Page.",
+        "category": "shopify_storefronts",
+        "column_count": 3,
+        "ctaLabel": [],
+        "ctaLink": [],
+        "imageList": [],
+        "imageDescription": []
+    },
+    {
+        "title": "Tria the Label",
+        "subtitle": "2024",
+        "description": "Implemented improvements to the homepage and made updates to the About Us page.",
+        "category": "shopify_storefronts",
+        "column_count": 3,
+        "ctaLabel": [],
+        "ctaLink": [],
+        "imageList": [],
+        "imageDescription": []
+    },
+    {
+        "title": "Shop Suki",
+        "subtitle": "2022 - 2024",
+        "description": "About Us Page, Holiday Gifting Guide, Valentine's Day Page.",
+        "category": "landing_pages",
+        "column_count": 2,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/pages_about-us.png"
+            },
+            {
+                "src": "./src/assets/pages_valentines.png"
+            },
+            {
+                "src": "./src/assets/pages_custom-gifts.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Postcard",
+        "subtitle": "2024",
+        "description": "Christmas catalogue, Membership page, Locations page",
+        "category": "landing_pages",
+        "column_count": 2,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/landingpages/postcard0.png"
+            },
+            {
+                "src": "./src/assets/landingpages/postcard_membership.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Fairmonde",
+        "subtitle": "2024",
+        "description": "B2B Page",
+        "category": "landing_pages",
+        "column_count": 1,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/landingpages/fairmonde0.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Shop Suki",
+        "subtitle": "2022 - 2024",
+        "description": "TV Commercial, BPI Partnership Video Ad, Click & Collect Video Ad.",
+        "category": "motion_graphics",
+        "column_count": 2,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "https://www.youtube.com/embed/wze3Jj4YfTw?si=H4AxozmUCxjeWVc7&rel=0"
+            },
+            {
+                "src": "https://youtube.com/embed/89Ea2-zN0Jk"
+            },
+            {
+                "src": "https://youtube.com/embed/0ANVgZL-y_I"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Shop Suki",
+        "subtitle": "2022 - 2024",
+        "description": "<h1>Promos</h1> and Product Marketing Emails.",
+        "category": "email_marketing",
+        "column_count": 3,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/email1.png"
+            },
+            {
+                "src": "./src/assets/email2.png"
+            },
+            {
+                "src": "./src/assets/email3.png"
+            },
+            {
+                "src": "./src/assets/email4.png"
+            },
+            {
+                "src": "./src/assets/email5.png"
+            }
+        ],
+        "imageDescription": []
+    }
+]

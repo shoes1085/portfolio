@@ -1,0 +1,29 @@
+{
+    "title": "Title Tests",
+    "subtitle": "Subtitle Test",
+    "description": "Description Test",
+    "category": "",
+    "ctaLabel": [
+        "Download Here",
+        "Download On Steam"
+    ],
+    "ctaLink": [
+        "https://google.com",
+        "https://google.com"
+    ],
+    "imageList": [
+        "page4",
+        "page5",
+        "./src/assets/landingpages/fairmonde0.png",
+        "./src/assets/summoner1.png",
+        "summoner3",
+        "summoner4"
+    ],
+    "imageDescription": [
+        "First Image",
+        "Second Image",
+        "Third Image",
+        "4th",
+        "5th"
+    ]
+}
