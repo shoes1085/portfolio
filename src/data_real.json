@@ -14,127 +14,126 @@
         ],
         "imageList": [
             {
-                "src": "./src/assets/ss5.png",
+                "src": "./src/assets/shopsuki/shopsuki_ss12.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss22.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss6.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss9.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss14.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss26.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss20.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss1.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss3.webp",
                 "spanall": true
             },
             {
-                "src": "./src/assets/shopsuki/ss29.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss6.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss12.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss2.webp"
             },
             {
-                "src": "./src/assets/ss7.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss30.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss22.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss31.webp"
             },
             {
-                "src": "./src/assets/ss6.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss27.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss9.png"
-            },
-            {
-                "src": "./src/assets/shopsuki/ss14.png"
-            },
-            {
-                "src": "./src/assets/shopsuki/ss26.png"
-            },
-            {
-                "src": "./src/assets/shopsuki/ss20.png"
-            },
-            {
-                "src": "./src/assets/ss1.png",
+                "src": "./src/assets/shopsuki/shopsuki_ss3.webp",
                 "spanall": true
             },
             {
-                "src": "./src/assets/ss3.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss2.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss6.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss8.webp"
             },
             {
-                "src": "./src/assets/ss2.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss28.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss30.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss17.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss31.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss1.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss27.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss19.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss3.png",
+                "src": "./src/assets/shopsuki/shopsuki_ss11.webp",
                 "spanall": true
             },
             {
-                "src": "./src/assets/shopsuki/ss2.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss5.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss8.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss29.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss28.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss25.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss17.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss7.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss1.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss4.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss19.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss5.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss11.png",
+                "src": "./src/assets/shopsuki/shopsuki_ss10.webp",
                 "spanall": true
             },
             {
-                "src": "./src/assets/shopsuki/ss25.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss13.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss7.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss7.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss4.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss21.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss5.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss23.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss10.png",
+                "src": "./src/assets/shopsuki/shopsuki_ss24.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss32.webp"
+            },
+            {
+                "src": "./src/assets/shopsuki/shopsuki_ss40.webp",
                 "spanall": true
             },
             {
-                "src": "./src/assets/shopsuki/ss13.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss18.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss21.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss15.webp"
             },
             {
-                "src": "./src/assets/shopsuki/ss23.png"
-            },
-            {
-                "src": "./src/assets/shopsuki/ss24.png"
-            },
-            {
-                "src": "./src/assets/shopsuki/ss32.png"
-            },
-            {
-                "src": "./src/assets/shopsuki/ss40.png",
-                "spanall": true
-            },
-            {
-                "src": "./src/assets/shopsuki/ss18.png"
-            },
-            {
-                "src": "./src/assets/shopsuki/ss15.png"
-            },
-            {
-                "src": "./src/assets/shopsuki/ss16.png"
+                "src": "./src/assets/shopsuki/shopsuki_ss16.webp"
             }
         ],
         "imageDescription": []
@@ -157,52 +156,81 @@
                 "spanall": true
             },
             {
-                "src": "./src/assets/wholesale/8.png"
+                "src": "./src/assets/wholesale/kcc_wholesale8.webp"
             },
             {
-                "src": "./src/assets/wholesale/1.png"
+                "src": "./src/assets/wholesale/kcc_wholesale1.webp"
             },
             {
-                "src": "./src/assets/wholesale/2.png"
+                "src": "./src/assets/wholesale/kcc_wholesale2.webp"
             },
             {
-                "src": "./src/assets/wholesale/3.png"
+                "src": "./src/assets/wholesale/kcc_wholesale3.webp"
             },
             {
-                "src": "./src/assets/wholesale/4.png"
+                "src": "./src/assets/wholesale/kcc_wholesale4.webp"
             },
             {
-                "src": "./src/assets/wholesale/5.png"
+                "src": "./src/assets/wholesale/kcc_wholesale5.webp"
             },
             {
-                "src": "./src/assets/wholesale/6.png"
+                "src": "./src/assets/wholesale/kcc_wholesale6.webp"
             },
             {
-                "src": "./src/assets/wholesale/7.png"
+                "src": "./src/assets/wholesale/kcc_wholesale7.webp"
             }
         ],
         "imageDescription": []
     },
     {
         "title": "Momiji",
-        "subtitle": "2024",
+        "subtitle": "2024 - 2025",
         "description": "Homepage, Collections Page, Product Page, Header, Footer, About Us Page.",
         "category": "shopify_storefronts",
-        "column_count": 3,
-        "ctaLabel": [],
-        "ctaLink": [],
-        "imageList": [],
-        "imageDescription": []
+        "column_count": 2,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/momiji/momiji_homepage.webp"
+            },            
+            {
+                "src": "./src/assets/momiji/momiji_megamenu.webp"
+            },            
+            {
+                "src": "./src/assets/momiji/momiji_collectionspage.webp"
+            }
+        ],
+        "imageDescription": [
+            "Homepage",
+            "Header Megamenu",
+            "Collections Page"
+        ]
     },
     {
         "title": "Savvy Mama",
-        "subtitle": "2024",
+        "subtitle": "2025",
         "description": "Homepage sections, Product Page.",
         "category": "shopify_storefronts",
-        "column_count": 3,
-        "ctaLabel": [],
-        "ctaLink": [],
-        "imageList": [],
+        "column_count": 2,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/savvymama/savvymama_homepage.webp"
+            },
+            {
+                "src": "./src/assets/savvymama/savvymama_pdp.webp"
+            }
+        ],
         "imageDescription": []
     },
     {
@@ -222,6 +250,87 @@
         "description": "Implemented improvements to the homepage and made updates to the About Us page.",
         "category": "shopify_storefronts",
         "column_count": 3,
+        "ctaLabel": [],
+        "ctaLink": [],
+        "imageList": [],
+        "imageDescription": []
+    },
+    {
+        "title": "Mondays Made",
+        "subtitle": "2024 - 2025",
+        "description": "Additional features, section improvements, and sitewide refinements and adjustments.",
+        "category": "shopify_storefronts",
+        "column_count": 1,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/mondaysmade/card_addtocart.png"
+            },
+            {
+                "src": "./src/assets/mondaysmade/pdp_variantdescription.png"
+            },
+            {
+                "src": "./src/assets/mondaysmade/pdp_specificcurrencyformat.png"
+            },
+            {
+                "src": "./src/assets/mondaysmade/pdp_stoq.png"
+            },
+            {
+                "src": "./src/assets/mondaysmade/pdp_wishlist.png"
+            },
+            {
+                "src": "./src/assets/mondaysmade/home_headericon.png"
+            }
+        ],
+        "imageDescription": [
+            "Add to Cart button in Product Card",
+            "Product description switching on variant change through metafields",
+            "Custom currency formats",
+            "Customized Stoq implementation with brand consistency",
+            "Implemented wishlist in product cards and product pages",
+            "Easy and user-friendly method to add header megamenu icons through blocks"
+        ]
+    },
+    {
+        "title": "Oatbedient",
+        "subtitle": "2025",
+        "description": "Storefront fixes, new sections, blog page",
+        "category": "shopify_storefronts",
+        "column_count": 2,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/oatbedient/oatbedient_accordion.png"
+            },
+            {
+                "src": "./src/assets/oatbedient/oatbedient_imgbanner.png"
+            },
+            {
+                "src": "./src/assets/landingpages/oatbedient_blog0.webp"
+            }
+        ],
+        "imageDescription": [
+            "Product page accordion, filled through metafields",
+            "Clickable image banner",
+            "Community blog page"
+        ]
+    },
+    {
+        "title": "Oatlife",
+        "subtitle": "2025",
+        "description": "Storefront redesign",
+        "category": "shopify_storefronts",
+        "column_count": 2,
         "ctaLabel": [],
         "ctaLink": [],
         "imageList": [],
@@ -266,10 +375,13 @@
         ],
         "imageList": [
             {
-                "src": "./src/assets/landingpages/postcard0.png"
+                "src": "./src/assets/landingpages/postcard0.webp"
             },
             {
-                "src": "./src/assets/landingpages/postcard_membership.png"
+                "src": "./src/assets/landingpages/postcard_membership.webp"
+            },
+            {
+                "src": "./src/assets/landingpages/postcard_stockist.webp"
             }
         ],
         "imageDescription": []
@@ -288,7 +400,53 @@
         ],
         "imageList": [
             {
-                "src": "./src/assets/landingpages/fairmonde0.png"
+                "src": "./src/assets/landingpages/fairmonde_b2b_page.webp"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "YMCA SG",
+        "subtitle": "2025",
+        "description": "Several landing pages for YMCA SG. Built using Elementor",
+        "category": "landing_pages",
+        "column_count": 2,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/ymca/ymca_aboutus.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_achievements.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_board.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_careers.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_education-services.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_governance.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_internship.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_news.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_ourteam.webp"
+            },
+            {
+                "src": "./src/assets/ymca/ymca_sustainability.webp"
             }
         ],
         "imageDescription": []
@@ -298,7 +456,7 @@
         "subtitle": "2022 - 2024",
         "description": "TV Commercial, BPI Partnership Video Ad, Click & Collect Video Ad.",
         "category": "motion_graphics",
-        "column_count": 2,
+        "column_count": 1,
         "ctaLabel": [
             "View gallery"
         ],
@@ -316,12 +474,16 @@
                 "src": "https://youtube.com/embed/0ANVgZL-y_I"
             }
         ],
-        "imageDescription": []
+        "imageDescription": [
+            "Proposed Zamboanga TV Station Commercial",
+            "BPI Collaboration Ad",
+            "Click & Collect Ad"
+        ]
     },
     {
         "title": "Shop Suki",
         "subtitle": "2022 - 2024",
-        "description": "<h1>Promos</h1> and Product Marketing Emails.",
+        "description": "Promos and Product Marketing Emails.",
         "category": "email_marketing",
         "column_count": 3,
         "ctaLabel": [
@@ -345,6 +507,129 @@
             },
             {
                 "src": "./src/assets/email5.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "New Normal",
+        "subtitle": "October 2021",
+        "description": "An entry for the 2021 MCM YES: RESILIEMC Game Creation Contest to Beat the Pandemic.",
+        "category": "games",
+        "column_count": 1,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/nn1.png"
+            },
+            {
+                "src": "./src/assets/nn2.png"
+            },
+            {
+                "src": "./src/assets/nn3.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Another Untitled Roguelike (WIP)",
+        "subtitle": "January 2025",
+        "description": "An unfinished roguelike made in LÖVE2D. Featuring the Lovable Rogue assets",
+        "category": "games",
+        "column_count": 1,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/games/roguelike0.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Untitled Bullet Hell Game (WIP)",
+        "subtitle": "September 2024",
+        "description": "A feature complete bullet hell game made in LÖVE2D",
+        "category": "games",
+        "column_count": 2,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/games/bullethell0.png"
+            },
+            {
+                "src": "./src/assets/games/bullethell1.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Untitled Roguelike Game (WIP)",
+        "subtitle": "May 2024",
+        "description": "A work-in-progress roguelike made in LÖVE2D",
+        "category": "games",
+        "column_count": 1,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/roguelike1.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Untitled Puzzle Game (WIP)",
+        "subtitle": "September 2023",
+        "description": "A work-in-progress puzzle game made in LÖVE2D",
+        "category": "games",
+        "column_count": 1,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/puzzle1.png"
+            }
+        ],
+        "imageDescription": []
+    },
+    {
+        "title": "Learning project for LÖVE2D",
+        "subtitle": "February 2022",
+        "description": "Feature-complete 2D space shooter created as a learning project to explore the framework.",
+        "category": "games",
+        "column_count": 1,
+        "ctaLabel": [
+            "View gallery"
+        ],
+        "ctaLink": [
+            "gallery"
+        ],
+        "imageList": [
+            {
+                "src": "./src/assets/spaceshooter1.png"
             }
         ],
         "imageDescription": []

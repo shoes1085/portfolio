@@ -1,14 +1,6 @@
 import "./gallery_styles.css"
 import "./styles.css"
 import React, { useState, useEffect } from 'react';
-
-import summoner1 from './assets/summoner1.png';
-import summoner2 from './assets/summoner2.png';
-import summoner3 from './assets/summoner3.png';
-import summoner4 from './assets/summoner4.png';
-import page4 from './assets/landingpages/fairmonde0.png';
-import page5 from './assets/landingpages/postcard0.png';
-
 // import content from './data.json';
 
 export default function Gallery({ item, openGallery }) {
