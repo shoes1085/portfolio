@@ -68,12 +68,6 @@ import wichita2 from './assets/wichita2.png';
 import wichita3 from './assets/wichita3.png';
 import wichita4 from './assets/wichita4.png';
 
-import email1 from './assets/email1.png';
-import email2 from './assets/email2.png';
-import email3 from './assets/email3.png';
-import email4 from './assets/email4.png';
-import email5 from './assets/email5.png';
-
 import city1 from "./assets/city1.png";
 import city2 from "./assets/city2.png";
 
